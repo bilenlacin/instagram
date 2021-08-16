@@ -1,8 +1,24 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { withRouter } from 'react-router';
+import Profile from '../components/Profile';
 import './App.css';
 
+import { fetchProfile } from '../action-creators';
+
 export class Navbar extends Component {
+  componentDidMount() {
+    this.props.fetchProfile();
+  }
+
+  sendProfile = () => {
+    const { profile } = this.props;
+    return profile.map((profil) => {
+      return <Profile profil={profil} />;
+    });
+  };
   render() {
+    const { profile } = this.props;
     return (
       <nav className='navbar navbar-expand-lg' id='navbar-app'>
         <div className='navContainer'>
@@ -113,22 +129,19 @@ export class Navbar extends Component {
                 </svg>
               </a>
             </div>
-            <div className='navIcon'>
-              <img
-                alt="bilenlacin's profile picture"
-                className='userAvatar'
-                // crossOrigin='anonymous'
-                // data-testid='user-avatar'
-                // draggable='false'
-                src='icons/person.svg'
-                style={{ width: '22px', height: '22px' }}
-              />
-            </div>
           </div>
+          {this.sendProfile()}
         </div>
       </nav>
     );
   }
 }
 
-export default Navbar;
+const mapStateToProps = (state) => {
+  const { profile } = state.profileReducer;
+  return { profile };
+};
+
+export default withRouter(
+  connect(mapStateToProps, { fetchProfile: fetchProfile })(Navbar)
+);

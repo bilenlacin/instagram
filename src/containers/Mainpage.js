@@ -8,7 +8,12 @@ import Stories from '../components/Stories';
 import Post from '../components/Post';
 import Suggestions from '../components/Suggestions';
 import Endnav from '../components/Endnav';
-import { fetchPosts, fetchStory } from '../action-creators';
+import {
+  fetchPosts,
+  fetchStory,
+  fetcSuggestions,
+  fetchProfile,
+} from '../action-creators';
 
 class Mainpage extends Component {
   componentDidMount() {
@@ -26,6 +31,8 @@ class Mainpage extends Component {
   };
   render() {
     const { stories } = this.props;
+    const { suggestions } = this.props;
+    const { profile } = this.props;
     return (
       <div className='mainContainer'>
         <div className='albumContainer'>
@@ -34,7 +41,12 @@ class Mainpage extends Component {
             {this.displayPosts()}
           </div>
         </div>
-        <Suggestions />
+        <Suggestions
+          suggestions={suggestions}
+          fetcSuggestions={this.props.fetcSuggestions}
+          profile={profile}
+          fetchProfile={this.props.fetchProfile}
+        />
         <Endnav />
         <div className='aboutInsta'>
           <span>© 2021 INSTAGRAM FROM FACEBOOK</span>
@@ -46,11 +58,16 @@ class Mainpage extends Component {
 const mapStateToProps = (state) => {
   const { posts } = state.postReducer;
   const { stories } = state.storyReducer;
-  return { posts, stories };
+  const { suggestions } = state.suggestionReducer;
+  const { profile } = state.profileReducer;
+  return { posts, stories, suggestions, profile };
 };
 
 export default withRouter(
-  connect(mapStateToProps, { fetchPosts: fetchPosts, fetchStory: fetchStory })(
-    Mainpage
-  )
+  connect(mapStateToProps, {
+    fetchPosts: fetchPosts,
+    fetchStory: fetchStory,
+    fetcSuggestions: fetcSuggestions,
+    fetchProfile: fetchProfile,
+  })(Mainpage)
 );

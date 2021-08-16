@@ -58,6 +58,9 @@
 .navIcon {
   margin-left: 22px;
 }
+.profileIcon {
+  margin-left: 22px;
+}
 .nav {
   width: 360px;
 
@@ -334,7 +337,6 @@ textarea:focus {
   padding-top: 6px;
 }
 .sugUserAvatar {
-  border: 1px solid #262626;
   border-radius: 50%;
 }
 .suguserInfo {
@@ -392,8 +394,8 @@ textarea:focus {
   border: 2px solid rgb(192, 83, 77);
 }
 .sugImage {
-  margin-top: 4px;
-  margin-left: 4px;
+  margin-top: 2.6px;
+  margin-left: 2.7px;
 }
 .follow {
   margin-left: auto;
