@@ -11,6 +11,9 @@ import {
   FETCH_SUGGESTION_ERROR,
   FETCH_PROFILE,
   FETCH_PROFILE_ERROR,
+  POST_COMMENT,
+  INCREASE_POST_LIKE,
+  DECREASE_POST_LIKE,
 } from '../action-types';
 
 export const fetchPosts = () => {
@@ -77,6 +80,59 @@ export const fetchProfile = () => {
         dispatch({
           type: FETCH_PROFILE_ERROR,
           payload: error,
+        });
+      });
+  };
+};
+
+export const insertPostMessage = (comment, postId, comments) => {
+  return async (dispatch) => {
+    await axios
+      .put('https://6115020faec65d0017e9dc5e.mockapi.io/instagram/' + postId, {
+        comments: [
+          ...comments,
+          {
+            anyInstaUserMessage: comment.commentMsg,
+            anyInstaUserName: comment.commenter,
+          },
+        ],
+      })
+      .then((response) => {
+        dispatch({
+          type: POST_COMMENT,
+          payload: response.data,
+        });
+      });
+  };
+};
+
+export const increasePostLike = (postId, counter, liked) => {
+  return async (dispatch) => {
+    await axios
+      .put('https://6115020faec65d0017e9dc5e.mockapi.io/instagram/' + postId, {
+        like: counter,
+        liked: liked,
+      })
+      .then((response) => {
+        dispatch({
+          type: INCREASE_POST_LIKE,
+          payload: response.data,
+        });
+      });
+  };
+};
+
+export const decreasePostLike = (postId, counter, liked) => {
+  return async (dispatch) => {
+    await axios
+      .put('https://6115020faec65d0017e9dc5e.mockapi.io/instagram/' + postId, {
+        like: counter,
+        liked: liked,
+      })
+      .then((response) => {
+        dispatch({
+          type: DECREASE_POST_LIKE,
+          payload: response.data,
         });
       });
   };

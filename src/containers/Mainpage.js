@@ -13,6 +13,9 @@ import {
   fetchStory,
   fetcSuggestions,
   fetchProfile,
+  insertPostMessage,
+  increasePostLike,
+  decreasePostLike,
 } from '../action-creators';
 
 class Mainpage extends Component {
@@ -22,11 +25,20 @@ class Mainpage extends Component {
 
   displayPosts = () => {
     const { posts } = this.props;
+    const { profile } = this.props;
     if (typeof posts === 'undefined') {
       return;
     }
     return posts.map((post) => {
-      return <Post post={post} />;
+      return (
+        <Post
+          post={post}
+          profile={profile}
+          insertPostMessage={this.props.insertPostMessage}
+          decreasePostLike={this.props.decreasePostLike}
+          increasePostLike={this.props.increasePostLike}
+        />
+      );
     });
   };
   render() {
@@ -69,5 +81,8 @@ export default withRouter(
     fetchStory: fetchStory,
     fetcSuggestions: fetcSuggestions,
     fetchProfile: fetchProfile,
+    insertPostMessage: insertPostMessage,
+    increasePostLike: increasePostLike,
+    decreasePostLike: decreasePostLike,
   })(Mainpage)
 );

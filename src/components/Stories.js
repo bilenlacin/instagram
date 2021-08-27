@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import Story from './Story';
 import { fetchStory } from '../action-creators';
 import { ScrollMenu, VisibilityContext } from 'react-horizontal-scrolling-menu';
+import { useRef } from 'react';
+
+import '../containers/App.css';
+
 export class Stories extends Component {
   componentDidMount() {
     this.props.fetchStory();
