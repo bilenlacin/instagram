@@ -13,7 +13,7 @@ import {
   fetchStory,
   fetcSuggestions,
   fetchProfile,
-  insertPostMessage,
+  insertPostComment,
   increasePostLike,
   decreasePostLike,
 } from '../action-creators';
@@ -34,7 +34,7 @@ class Mainpage extends Component {
         <Post
           post={post}
           profile={profile}
-          insertPostMessage={this.props.insertPostMessage}
+          insertPostComment={this.props.insertPostComment}
           decreasePostLike={this.props.decreasePostLike}
           increasePostLike={this.props.increasePostLike}
         />
@@ -81,7 +81,7 @@ export default withRouter(
     fetchStory: fetchStory,
     fetcSuggestions: fetcSuggestions,
     fetchProfile: fetchProfile,
-    insertPostMessage: insertPostMessage,
+    insertPostComment: insertPostComment,
     increasePostLike: increasePostLike,
     decreasePostLike: decreasePostLike,
   })(Mainpage)

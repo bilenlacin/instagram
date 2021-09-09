@@ -21,7 +21,9 @@ export class Suggestions extends Component {
   displayProfile = () => {
     const { profile } = this.props;
     return profile.map((profil) => {
-      return <Sugprofile profil={profil} />;
+      if (profil.profileUserName === 'bilenlacin') {
+        return <Sugprofile profil={profil} />;
+      }
     });
   };
   render() {

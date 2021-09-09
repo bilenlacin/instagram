@@ -85,17 +85,23 @@ export const fetchProfile = () => {
   };
 };
 
-export const insertPostMessage = (comment, postId, comments) => {
+export const insertPostComment = (
+  comment,
+  postId,
+  comments,
+  commentQuantity
+) => {
   return async (dispatch) => {
     await axios
       .put('https://6115020faec65d0017e9dc5e.mockapi.io/instagram/' + postId, {
         comments: [
-          ...comments,
           {
             anyInstaUserMessage: comment.commentMsg,
             anyInstaUserName: comment.commenter,
           },
+          ...comments,
         ],
+        commentQuantity: commentQuantity,
       })
       .then((response) => {
         dispatch({

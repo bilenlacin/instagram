@@ -7,6 +7,7 @@ import thunk from 'redux-thunk';
 
 import './index.css';
 import App from './containers/App';
+import Profile from './containers/Profile';
 import reducers from './reducers';
 import reportWebVitals from './reportWebVitals';
 
@@ -18,6 +19,9 @@ ReactDOM.render(
       <Switch>
         <Route exact path='/'>
           <App />
+        </Route>
+        <Route path='/:profile'>
+          <Profile />
         </Route>
       </Switch>
     </Router>

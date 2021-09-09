@@ -17,11 +17,12 @@ export class PostMessageArea extends Component {
     const post = this.props;
     const postId = post.post.id;
     const comments = post.post.comments;
+    const commentQuantity = post.post.commentQuantity + 1;
     var comment = {
       commenter: profile[0].profileUserName,
       commentMsg: commenterMessage.commenterMessage,
     };
-    this.props.insertPostMessage(comment, postId, comments);
+    this.props.insertPostComment(comment, postId, comments, commentQuantity);
     this.setState({ commenterMessage: '' });
   };
   render() {

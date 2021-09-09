@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 
 export class Suggestion extends Component {
+  profilPageDisplay = () => {
+    const { suggestion } = this.props;
+    const profile = suggestion.sugName;
+    this.props.history.push(profile);
+  };
   render() {
     const { suggestion } = this.props;
     return (
@@ -18,7 +24,9 @@ export class Suggestion extends Component {
           </div>
         </div>
         <div className='suggestionUserDetail'>
-          <div className='suggestionUserName'>{suggestion.sugName}</div>
+          <a onClick={this.profilPageDisplay} className='suggestionUserName'>
+            {suggestion.sugName}
+          </a>
           <div className='recomendedBy'>Instagram Official Account</div>
         </div>
         <button className='follow'>Follow</button>
@@ -27,4 +35,4 @@ export class Suggestion extends Component {
   }
 }
 
-export default Suggestion;
+export default withRouter(Suggestion);

@@ -233,7 +233,7 @@ export class Post extends Component {
         <PostMessageArea
           post={post}
           profile={profile}
-          insertPostMessage={this.props.insertPostMessage}
+          insertPostComment={this.props.insertPostComment}
         />
       </div>
     );
