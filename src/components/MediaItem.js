@@ -3,13 +3,17 @@ import React, { Component } from 'react';
 export class MediaItem extends Component {
   render() {
     const { media } = this.props;
+
     if (
       media.includes('.jpg') ||
       media.includes('.png') ||
       media.includes('.jpeg')
     ) {
       return (
-        <div class='gallery-item'>
+        <div
+          class='gallery-item'
+          onClick={() => this.props.displayModal(media)}
+        >
           <img
             class='gallery-image'
             src={media}
@@ -68,7 +72,10 @@ export class MediaItem extends Component {
       );
     } else {
       return (
-        <div class='gallery-item'>
+        <div
+          class='gallery-item'
+          onClick={() => this.props.displayModal(media)}
+        >
           <video
             class='gallery-image'
             src={media}

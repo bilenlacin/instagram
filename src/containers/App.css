@@ -225,7 +225,7 @@
   position: absolute;
   right: 0;
   left: 0;
-  bottom: 0;
+  bottom: 5px;
   top: 0;
   display: flex;
   justify-content: center;
@@ -443,7 +443,7 @@ textarea:focus {
 }
 .sugImage {
   margin-top: 2.6px;
-  margin-left: 2.7px;
+  margin-left: 3.3px;
 }
 .follow {
   margin-left: auto;

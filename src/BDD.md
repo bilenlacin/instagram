@@ -15,6 +15,12 @@ when : tweetle butonuna basıldığında
 then: atılan tweeti kullanıcı adı ve resmini kayıt etmek
 and: atılan tweeti , kullanıcı adı ve kullanıcı resmini kullanıcıya göstermek
 
+Profile Media Modal
+
+Given: kullanıcı profideki resimlere tıklar
+when : sayfa açıldığında
+then: tıklanan resmi ve yorumları kullanıcıya göster
+
 PROFILE MEDIA BDD
 given : kullanıcı önerilerdeki isme tıklar
 when : yönlendirilen sayfa yüklendiğinde

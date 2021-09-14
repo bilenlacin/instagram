@@ -11,7 +11,11 @@ export class ProfileComponent extends Component {
       <div className='profileComponents'>
         <div className='profileComponent'>
           <ProfileHeader />
-          <MediaComp prof={prof} fetchProfile={this.props.fetchProfile} />
+          <MediaComp
+            prof={prof}
+            fetchProfile={this.props.fetchProfile}
+            displayModal={this.props.displayModal}
+          />
           <ProfileFooter />
         </div>
       </div>

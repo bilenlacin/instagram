@@ -68,7 +68,7 @@ export class ProfileFooter extends Component {
             </div>
           </div>
         </div>
-        <div style={{ marginTop: '-3px' }}>
+        <div style={{ marginTop: '10px' }}>
           <div
             style={{
               display: 'flex',

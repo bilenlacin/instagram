@@ -9,7 +9,13 @@ export class MediaComp extends Component {
   displayMedia = () => {
     const { prof } = this.props;
     return prof.profileMedia.map((media) => {
-      return <MediaItem media={media} />;
+      return (
+        <MediaItem
+          media={media}
+          prof={prof}
+          displayModal={this.props.displayModal}
+        />
+      );
     });
   };
   render() {
