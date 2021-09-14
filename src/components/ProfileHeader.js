@@ -45,7 +45,7 @@ export class ProfileHeader extends Component {
                   </svg>
                 </button>
               </div>
-              <button className='moreButton'>
+              <button className='mor-button'>
                 <svg
                   aria-label='Options'
                   className='moreIcon'

@@ -8,8 +8,8 @@ export class App extends Component {
   render() {
     return (
       <div className='instaApp'>
-        <Navbar />
         <Mainpage />
+        <Navbar />
       </div>
     );
   }

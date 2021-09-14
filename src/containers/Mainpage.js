@@ -46,22 +46,24 @@ class Mainpage extends Component {
     const { suggestions } = this.props;
     const { profile } = this.props;
     return (
-      <div className='mainContainer'>
-        <div className='albumContainer'>
-          <div className='album'>
-            <Stories stories={stories} fetchStory={this.props.fetchStory} />
-            {this.displayPosts()}
+      <div className='main-container'>
+        <div className='mainContainer'>
+          <div className='albumContainer'>
+            <div className='album'>
+              <Stories stories={stories} fetchStory={this.props.fetchStory} />
+              {this.displayPosts()}
+            </div>
           </div>
-        </div>
-        <Suggestions
-          suggestions={suggestions}
-          fetcSuggestions={this.props.fetcSuggestions}
-          profile={profile}
-          fetchProfile={this.props.fetchProfile}
-        />
-        <Endnav />
-        <div className='aboutInsta'>
-          <span>© 2021 INSTAGRAM FROM FACEBOOK</span>
+          <Suggestions
+            suggestions={suggestions}
+            fetcSuggestions={this.props.fetcSuggestions}
+            profile={profile}
+            fetchProfile={this.props.fetchProfile}
+          />
+          <Endnav />
+          <div className='aboutInsta'>
+            <span>© 2021 INSTAGRAM FROM FACEBOOK</span>
+          </div>
         </div>
       </div>
     );

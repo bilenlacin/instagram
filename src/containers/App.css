@@ -1,7 +1,6 @@
 .instaApp {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
     Arial, sans-serif;
-  background-color: rgba(var(--b3f, 250, 250, 250), 1);
 }
 #navbar-app {
   border-bottom: solid 1px #dbdbdb;
@@ -87,20 +86,22 @@
   margin: 0 auto;
   padding-top: 83px;
 }
-
+.main-container {
+  background-color: rgba(var(--b3f, 250, 250, 250), 1);
+}
 .albumContainer {
   max-width: 614px;
   margin-right: 28px;
   width: 100%;
-  z-index: -1;
-  position: absolute;
-  background-color: rgba(var(--b3f, 250, 250, 250), 1);
+
+  caret-color: transparent;
 }
 
 .sugContainer {
   width: 293px;
   margin-left: 640px;
   position: fixed;
+  caret-color: transparent;
 }
 .storybox {
   width: 614px;
@@ -539,6 +540,7 @@ textarea:focus {
   .albumContainer {
     margin-left: auto;
     margin-right: auto;
+    caret-color: transparent;
   }
 }
 @media (max-width: 768px) {
