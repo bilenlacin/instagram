@@ -30,7 +30,6 @@ npm start
 - Projeyi responsive olarak tasarlamayı ,
 - Farklı boyutlardaki resimleri bir alan içinde aynı boyutta görüntüleyebilmeyi,
 - Bir resme tıklandığında resmin ekranda nasıl ön planda gösterilip diğer resimlerin arka planda kalacağını ,
-- Oluşturulan bir div'i mouse scroll down-up yapıldığı zaman ekranda hareket etmeden sabit belirlenen yerde tutabilmeyi ,
 - Bir div'e fazla resim eklenince div dışına taşan resimleri gizlemeyi ve gizlenen resimlerin, kaydırma ile görüntülenebileceğini ,
 - MockAPI kullanarak verileri çekmeyi , güncellemeyi, eklemeyi,
 
