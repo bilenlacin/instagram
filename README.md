@@ -12,8 +12,8 @@ When :  Listelenen resime tıkladığında
 Then: Tıklanan resmi ve yorumları kullanıcıya göster
 ```
 # Demo
- 
-https://youtu.be/2o9MTfsr_BA
+ [![Watch the video](https://i9.ytimg.com/vi_webp/2o9MTfsr_BA/mqdefault.webp?v=61433e93&sqp=CKT9jIoG&rs=AOn4CLC23HbYBSzzr26jplN02H51wh0atA)](https://youtu.be/2o9MTfsr_BA)
+
 
 ## Installation
 ```
