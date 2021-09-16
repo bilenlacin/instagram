@@ -13,7 +13,7 @@ Then: Tıklanan resmi ve yorumları kullanıcıya göster
 ```
 # Demo
  
-(https://youtu.be/2o9MTfsr_BA)
+https://youtu.be/2o9MTfsr_BA
 
 ## Installation
 ```
