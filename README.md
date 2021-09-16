@@ -12,7 +12,7 @@ When :  Listelenen resime tıkladığında
 Then: Tıklanan resmi ve yorumları kullanıcıya göster
 ```
 # Demo
- [![Watch the video](https://img.youtube.com/vi/2o9MTfsr_BA/maxresdefault.jpg)](https://youtu.be/2o9MTfsr_BA)
+ [![Watch the video](https://img.youtube.com/vi/2o9MTfsr_BA/hqdefault.jpg)](https://youtu.be/2o9MTfsr_BA)
 
 
 ## Installation
