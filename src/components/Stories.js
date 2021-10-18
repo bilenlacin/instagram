@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import Story from './Story';
 
-import '../containers/App.css';
-
 export class Stories extends Component {
   componentDidMount() {
     this.props.fetchStory();

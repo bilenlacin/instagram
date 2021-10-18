@@ -3,7 +3,6 @@ import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { Route, Switch } from 'react-router-dom';
 
-import './App.css';
 import Stories from '../components/Stories';
 import Post from '../components/Post';
 import Suggestions from '../components/Suggestions';

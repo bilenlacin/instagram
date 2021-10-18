@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 import Profile from '../components/Profile';
-import './App.css';
 
 import { fetchProfile } from '../action-creators';
 
