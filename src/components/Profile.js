@@ -8,9 +8,6 @@ export class Profile extends Component {
         <img
           alt={profil.profileUserName}
           className='userAvatar'
-          // crossOrigin='anonymous'
-          // data-testid='user-avatar'
-          // draggable='false'
           src={profil.profileUserImage}
           style={{ width: '24px', height: '24px', borderRadius: '50%' }}
         />

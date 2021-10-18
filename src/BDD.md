@@ -17,9 +17,9 @@ and: atılan tweeti , kullanıcı adı ve kullanıcı resmini kullanıcıya gös
 
 Profile Media Modal
 
-Given: kullanıcı profideki resimlere tıklar
-when : sayfa açıldığında
-then: tıklanan resmi ve yorumları kullanıcıya göster
+Given: Kullanıcı profideki resimlere tıklar
+when : Sayfa açıldığında
+then: Tıklanan resmi ve yorumları kullanıcıya göster
 
 PROFILE MEDIA BDD
 given : kullanıcı önerilerdeki isme tıklar

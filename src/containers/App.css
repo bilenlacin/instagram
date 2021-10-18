@@ -150,6 +150,7 @@
   border-radius: 30px;
   margin-left: 2.5px;
   margin-top: 2.7px;
+  object-fit: cover;
 }
 .albumheader {
   height: 60px;
