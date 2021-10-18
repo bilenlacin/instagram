@@ -5,7 +5,6 @@ import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import thunk from 'redux-thunk';
 
-import './index.css';
 import App from './containers/App';
 import Profile from './containers/Profile';
 import reducers from './reducers';
